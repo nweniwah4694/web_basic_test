@@ -18,7 +18,7 @@ p {
 
 /* Global */
 .container{
-  width:80%;
+  width:70%;
   margin:auto;
   overflow:hidden;
 }
@@ -38,20 +38,8 @@ p {
   padding: 2px 15px;
 }
 
-.dark{
-  padding:15px;
-  background:#35424a;
-  color:#ffffff;
-  margin-top:10px;
-  margin-bottom:10px;
-}
-
-.float-right {
-  float: right;
-}
-
 /* Header **/
-header{
+header {
   background:#35424a;
   color:#ffffff;
   padding-top:30px;
@@ -59,16 +47,16 @@ header{
   border-bottom:#e8491d 3px solid;
 }
 
-header a{
+header a {
   color:#ffffff;
-  text-decoration:none;
+  text-decoration: none;
   text-transform: uppercase;
-  font-size:16px;
+  font-size: 16px;
 }
 
-header li{
-  float:left;
-  display:inline;
+header li {
+  float: left;
+  display: inline;
   padding: 0 20px 0 20px;
 }
 
@@ -98,7 +86,7 @@ header a:hover{
 /* Showcase */
 #showcase{
   min-height:400px;
-  background:url('../img/showcase.jpg') no-repeat 0 -400px;
+  background:url('../img/top_bg.jpg') no-repeat 0 -400px;
   text-align:center;
   color:#ffffff;
 }
@@ -112,22 +100,26 @@ header a:hover{
 #showcase p{
   font-size:20px;
 }
+
 .card-title {
   position: relative;
   font-weight: bold;
   margin: 0;
 
 }
-.underline-top::before {
+
+.top-line::before {
   content: "";
   border-top: 4px solid #333;
   width: 30px;
   position: absolute;
   top: -15px;
 }
+
 .find-more {
   margin-top: -22px;
 }
+
 .price {
   font-style: normal;
   font-weight: 500;
@@ -139,27 +131,39 @@ header a:hover{
 .latest-title  {
   margin: 60px 0;
 }
-
-.thales-des {
+.line-top {
   padding-top: 60px;
   border-top: 1px solid #979797;
   margin-top: 60px;  
 }
-
-
-/* 
-footer{
-  padding:20px;
-  margin-top:20px;
-  color:#ffffff;
-  background-color:#e8491d;
-  text-align: center;
+.number {
+  font-size: 25px;
+  color: #2CA1F8;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
 }
+
+.thales-blog img {
+  height: 400px;
+}
+.contact-info form {
+  width: 70%;
+}
+.contact-info input, .contact-info textarea ,.contact-info button {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+}
+
+.contact-info button {
+background: #272525;
+color: #fff;  
+height: 60px;
+}
+
 
 /* Media Queries */
 @media(max-width: 768px){
-  #newsletter form input[type="email"], .quote input, .quote textarea{
-    width:100%;
-    margin-bottom:5px;
-  }
 }
