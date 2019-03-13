@@ -9,31 +9,80 @@
   <title>Bootstrap Tutorial</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
-
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
   <style>
   </style> 
 </head>
 <body>
 	<!-- Header Showcase -->
-  <header>
-    <div class="container">
-      <div id="branding">
-        <h1><span class="highlight">Acme</span> Web Design</h1>
-      </div>
-      <nav>
-        <ul>
-          <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-        </ul>
+	<section id="top-container">
+    <header class="d-table pt-4 mx-auto">
+      <div id="branding" class="float-left"><h4><span class="highlight">THALES</span>CODE</h4></div>
+      <!--Navbar-->
+      <nav class="navbar navbar-light light-blue lighten-4 sp-menu">      
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">Navbar</a>      
+        <!-- Collapse button -->
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+              class="fas fa-bars fa-1x"></i></span></button>
+        <!-- Collapsible content -->
+        <div class="navbar-collapse" id="navbarSupportedContent1">                                                                        
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">TRAINING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">THALESblog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <!-- Links -->
+    
+        </div>
+      <!-- Collapsible content -->      
       </nav>
-    </div>
-  </header>
-	<section id="showcase">
-    <div class="container">
-      <h1>Affordable Professional Web Design</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu luctus ipsum, rhoncus semper magna. Nulla nec magna sit amet sem interdum condimentum.</p>
-    </div>
+      <!--/.Navbar-->   
+      <!-- Navbar -->
+      <ul class="pc-menu float-right">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TRAINING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">THALESblog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul> 
+        <!--/.Navbar-->     
+    </header>
+    <div class="top-des mt-5">
+      <div class="black-line mb-4"></div>
+      <div class="top-left">
+        <div class="main-title font-weight-bold">ThalesCode</div>
+        <div class="sub-title font-weight-bold">The best way to learn how to programing online</div>
+        <span class="btn-black float-left mt-5">Developers</span><span class="btn-black float-left ml-5 mt-5">Companies</span>
+        <p class="d-inline-block mt-5">With ThalesCode you will learn new technologies base on continues development with a flexible schedule, where you can focus and participate with others online, to find more come and join us.</p>
+      </div>
+      <div class="top-right">
+        <img src="./img/top_people.jpg" class="w-100"></div>
+      </div>
   </section>
   <!-- Main Area -->
   <main id="main" class="container">     
@@ -94,7 +143,8 @@
             <a href="#" class="button mt-4">Show More</a>
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-          <img src="./img/logo_css.png" class="float-right">
+          <img src="./img/black_bg.jpg" class="w-100 loat-right">
+          <!-- <img src="./img/thales_code.jpg" class="float-right"> -->
         </div>
       </div> 
       <div class="line-top text-center">	     
@@ -138,6 +188,9 @@
             <img src="./img/blog_1.jpg" class="w-100">
             <h2 class="pt-3 font-weight-bold mt-2" style="min-height: 115px;">A step-by-step guide to getting started with HTML forms</h2>
             <p>HTML forms are required when you want to collect some data from the person who visits your website. For example, when you register/login for applications like Uber, Netflix, or Facebook, you enter information like Name, Email, and Password through HTML forms.</p>
+            <div class="font-awsome">
+                <i class="fab fa-google-plus-g"></i>
+            </div>
           </div>  
           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mt-5">  
             <img src="./img/blog_2.jpg" class="w-100">  
@@ -147,12 +200,12 @@
         </div>
         <div class="row">            
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mt-5">  
-              <img src="./img/blog_2.jpg" class="w-100">  
+              <img src="./img/blog_3.jpg" class="w-100">  
               <h4 class="pt-3 font-weight-bold mt-2" style="min-height: 115px;">These common mistakes will lead to immortal bugs. Learn how to avoid them.</h4>
               <p>The question that you or your teammate would ask after the product manager posts a snapshot of the bug. This whole event feels like a Deja Vu...</p>
             </div> 
             <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 mt-5">    
-                <img src="./img/blog_1.jpg" class="w-100">
+                <img src="./img/blog_4.jpg" class="w-100">
                 <h2 class="pt-3 font-weight-bold mt-2" style="min-height: 115px;">A step-by-step guide to getting started with HTML forms</h2>
                 <p>HTML forms are required when you want to collect some data from the person who visits your website. For example, when you register/login for applications like Uber, Netflix, or Facebook, you enter information like Name, Email, and Password through HTML forms.</p>
               </div>  
@@ -173,7 +226,7 @@
               Email: info@motivo.jp</p>
           </div> 
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <form class="quote">
+            <form class="float-right">
               <input type="text" placeholder="COMPANY NAME">
               <input type="text" placeholder="FIRST NAME">
               <input type="text" placeholder="LAST NAME">
@@ -184,13 +237,32 @@
           </div> 
         </div>
       </div>  
-    </main>
-    <!-- Footer -->
-    <footer id="main-footer" class="grid">
-      <div>Acme Web Solutions</div>
-      <div>Project By <a href="http://traversymedia.com" target="_blank">Traversy Media</a></div>
-    </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <img src="./img/map.png" class="w-100 mt-5 pt-3">
+  </main>
+  <!-- Footer -->
+  <footer id="main-footer" class="container mt-5 pt-5">
+    <ul class="float-left">
+      <li class="font-weight-bold mb-2">INFORMATION</li>
+      <li>About us</li>
+      <li>Companies</li>
+      <li>Candidates</li>
+      <li>Internships</li>
+      <li>Blogs</li>
+      <li>Testimonials</li>
+    </ul>
+    <ul class="partners float-left ml-5 pl-5">
+        <li class="font-weight-bold mb-2">PARTNERS</li>
+        <li>Company  Information</li>
+        <li>Privacy and policy</li>
+        <li>disclosure</li>
+    </ul>    
+    <div class="subscribe float-right">
+      <div class="font-weight-bold mb-3">SUBSCRIBE</div>
+      <input type="email" placeholder="Enter your email">
+    </div>
+    <div class="copyright d-inline-block w-100 text-right my-5 pb-5">© Copyright Thales COde inc 2019</div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
