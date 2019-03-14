@@ -9,7 +9,7 @@
   <title>Bootstrap Tutorial</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <style>
   </style> 
 </head>
@@ -17,17 +17,16 @@
 	<!-- Header Showcase -->
 	<section id="top-container">
     <header class="d-table pt-4 mx-auto">
-      <div id="branding" class="float-left"><h4><span class="highlight">THALES</span>CODE</h4></div>
-      <!--Navbar-->
-      <nav class="navbar navbar-light light-blue lighten-4 sp-menu">      
+      <div id="branding" class="float-left pc"><h4><span class="highlight">THALES</span>CODE</h4></div>
+      <!--Navbar for sp-->
+      <nav class="navbar navbar-light light-blue lighten-4 w-100 p-0 sp">      
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">Navbar</a>      
         <!-- Collapse button -->
         <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
           aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
               class="fas fa-bars fa-1x"></i></span></button>
         <!-- Collapsible content -->
-        <div class="navbar-collapse" id="navbarSupportedContent1">                                                                        
+        <div class="navbar-collapse position-absolute w-100" id="navbarSupportedContent1">                                                                        
           <!-- Links -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -52,8 +51,8 @@
       <!-- Collapsible content -->      
       </nav>
       <!--/.Navbar-->   
-      <!-- Navbar -->
-      <ul class="pc-menu float-right">
+      <!-- Navbar for pc -->
+      <ul class="pc float-right">
           <li class="nav-item active">
             <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
           </li>
@@ -72,7 +71,13 @@
         </ul> 
         <!--/.Navbar-->     
     </header>
-    <div class="top-des mt-5">
+    <div class="top-des sp">
+        <div class="main-title font-weight-bold">ThalesCode</div>
+        <div class="sub-title font-weight-bold">The best way <br> to learn</div>
+        <div class="font-weight-bold developer">DEVELOPERS</div>
+        <div class="font-weight-bold company">COMPANIES</div>
+    </div>
+    <div class="top-des mt-5 pc">
       <div class="black-line mb-4"></div>
       <div class="top-left">
         <div class="main-title font-weight-bold">ThalesCode</div>
@@ -81,8 +86,9 @@
         <p class="d-inline-block mt-5">With ThalesCode you will learn new technologies base on continues development with a flexible schedule, where you can focus and participate with others online, to find more come and join us.</p>
       </div>
       <div class="top-right">
-        <img src="./img/top_people.jpg" class="w-100"></div>
+        <img src="./img/top_people.jpg" class="w-100">
       </div>
+    </div>
   </section>
   <!-- Main Area -->
   <main id="main" class="container">     
@@ -94,7 +100,7 @@
 		       <a href="#" class="button float-right find-more">Find More</a>
 	      </div>
       </div>     
-      <div class="row">     
+      <div class="latest-job row">     
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
           <h4 class="top-line">FullStack Developer</h4>
           <span class="price" class="price">6.000.000 - 8.000.000万円</span>
@@ -136,45 +142,47 @@
           </div>
         </div>
       </div>   
-      <div class="row line-top">
+      <div class="middle-block row line-top">
         <div class="top-line col-lg-8 col-md-12 col-sm-12 col-xs-12 text-left">
           <h1 class="font-weight-bold">Get where you’re going <br> faster with ThalesCode</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
             <a href="#" class="button mt-4">Show More</a>
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-          <img src="./img/black_bg.jpg" class="w-100 loat-right">
+          <img src="./img/black_bg.png" class="w-100 loat-right">
           <!-- <img src="./img/thales_code.jpg" class="float-right"> -->
         </div>
       </div> 
-      <div class="line-top text-center">	     
-        <h1 class="font-weight-bold">Why to choose ThalesCode</h1> 	 
-        <span>why developers choose us</span>    	 
-        <div class="d-table mx-auto mt-2"><h4 class="font-weight-bold float-left">Employers</h4><h4 class="font-weight-bold float-left pl-5">Candidates</h4></div>  
-      </div>  
-      <div class="row mt-5">     
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-5">     
-          <span class="number font-weight-bold">01</span>     
-          <h5 class="pt-3 font-weight-bold mt-2">IT Training</h5>
-          <p>Our team includes people who specialize in IT development and product development services who have the experience and knowledge to understand what our clients need.</p>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-5"> 
-          <span class="number font-weight-bold">02</span>             
-          <h5 class="pt-3 font-weight-bold mt-2">Global Recruitment</h5>
-          <p>We focuses on recruit high skilled engineers with knowledge and experience from all around the world, providing qualify candidates who are ready to create innovating solutions for businesses.</p>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-5">          
-           <span class="number font-weight-bold">03</span>    
-          <h5 class="pt-3 font-weight-bold mt-2">HR - HRBP</h5>
-          <p>Due to our understanding of technologies, our recruiters not only provide candidates to companies but also consulting on how to structure teams to create a flexible working environment between Japanese and foreigner engineers.</p>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-5">    
-          <span class="number font-weight-bold">04</span>          
-          <h5 class="pt-3 font-weight-bold mt-2">LifeCare Support</h5>
-          <p>Motivo provides a full relocating package support for candidates who are coming from abroad, taking care from their VISAS support, allocation, life setup and incorporate themselves into the Japanese culture and community. </p>
-        </div>       
-      </div> 
-      <a href="#" class="button float-right mt-4">Find More</a>
+      <div class="thales-code">
+        <div class="line-top text-center">	     
+          <h1 class="font-weight-bold">Why to choose ThalesCode</h1> 	 
+          <span>why developers choose us</span>    	 
+          <div class="d-table mx-auto mt-2"><h4 class="font-weight-bold float-left">Employers</h4><h4 class="font-weight-bold float-left pl-5">Candidates</h4></div>  
+        </div>  
+        <div class="row mt-5">     
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-5">     
+            <span class="number font-weight-bold">01</span>     
+            <h5 class="pt-3 font-weight-bold mt-2">IT Training</h5>
+            <p>Our team includes people who specialize in IT development and product development services who have the experience and knowledge to understand what our clients need.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-5"> 
+            <span class="number font-weight-bold">02</span>             
+            <h5 class="pt-3 font-weight-bold mt-2">Global Recruitment</h5>
+            <p>We focuses on recruit high skilled engineers with knowledge and experience from all around the world, providing qualify candidates who are ready to create innovating solutions for businesses.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-5">          
+            <span class="number font-weight-bold">03</span>    
+            <h5 class="pt-3 font-weight-bold mt-2">HR - HRBP</h5>
+            <p>Due to our understanding of technologies, our recruiters not only provide candidates to companies but also consulting on how to structure teams to create a flexible working environment between Japanese and foreigner engineers.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-5">    
+            <span class="number font-weight-bold">04</span>          
+            <h5 class="pt-3 font-weight-bold mt-2">LifeCare Support</h5>
+            <p>Motivo provides a full relocating package support for candidates who are coming from abroad, taking care from their VISAS support, allocation, life setup and incorporate themselves into the Japanese culture and community. </p>
+          </div>       
+        </div> 
+        <a href="#" class="button float-right mt-4">Find More</a>
+      </div>
       <div class="thales-blog mt-5 line-top d-inline-block w-100">	  
         <div class="title">	     
           <h1>ThalesBlog</h1> 	     	   
@@ -189,7 +197,7 @@
             <h2 class="pt-3 font-weight-bold mt-2" style="min-height: 115px;">A step-by-step guide to getting started with HTML forms</h2>
             <p>HTML forms are required when you want to collect some data from the person who visits your website. For example, when you register/login for applications like Uber, Netflix, or Facebook, you enter information like Name, Email, and Password through HTML forms.</p>
             <div class="font-awsome">
-                <i class="fab fa-google-plus-g"></i>
+                <i class="fas fa-google-plus-g"></i>
             </div>
           </div>  
           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mt-5">  

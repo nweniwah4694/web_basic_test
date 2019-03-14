@@ -68,7 +68,7 @@ header li {
   border-top: 5px solid #000;
 }
 
-.sp-menu {
+.sp {
   display: none !important;
 }
 
@@ -98,7 +98,7 @@ header a:hover {
 
 /* top-container */
 #top-container {
-  background-image: url('../img/top_bg.jpg'); 
+  background-image: url('../img/top_bg_pc.jpg'); 
   background-color: #cccccc; 
   background-position: center;
   background-repeat: no-repeat; 
@@ -117,11 +117,11 @@ header a:hover {
   float: right;
 }
 
-.top-left .main-title {
+.top-des .main-title {
   font-size: 50px;
 }
 
-.top-left .sub-title {
+.top-des .sub-title {
   font-size: 35px;
 }
 
@@ -218,14 +218,96 @@ header a:hover {
   padding: 6px 10px;
 }
 
+/* .navbar-collapse  {
+  display: none;
+} */
 /* Media Queries */
 @media(max-width: 768px){
-  .sp-menu {
+
+  .sp {
     display: block  !important;
   }
 
-  .pc-menu {
+  .pc {
     display: none  !important;
+  }
+
+  .navbar-nav {
+    background: #bbb;
+  }
+  .navbar-collapse {
+    display: none;
+  }
+
+.navbar-collapse.show {
+  display: block;
+  }
+  
+#top-container {
+    background-image: url('../img/top_bg_sp.jpg'); 
+    height: 700px;
+    position: relative;
+  }
+
+  .top-des {
+    width: 90%;
+    margin-top: 35px;
+  }
+
+  .top-des .main-title {
+    font-size: 40px;
+  }
+  
+  .top-des .sub-title {
+    font-size: 25px;
+  }
+
+  .developer, .company {
+    position: absolute;
+    bottom: 18%;
+    left: 15%;
+    color: #fff;    
+  }
+
+  .company { 
+    bottom: 9%;
+    left: 30%;
+  }
+
+  .container {
+    padding: 0 !important; 
+  }
+
+  #main {
+    background: #F2F2F2;
+  }
+  .latest-title, .latest-job, .middle-block, .thales-blog {
+    padding: 0 20px !important;
+  }
+  .latest-job .col-lg-3, .thales-code .col-lg-3 {
+    background: #fff;
+    margin: 20px;
+    padding: 20px 30px;
+    text-align: center;
+  }
+
+  .thales-code {
+    background: linear-gradient(119.64deg, #2FB7F3 3.41%, #769ADC 60.49%, #9376DC 119.98%);
+    margin-top: 0 !important;
+  }
+
+  .thales-code .row {
+    margin-top: 0 !important;
+    padding: 0 20px;
+  }
+
+  .contact-info, #main-footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .contact-info form {
+    width: 100%;
   }
 
   #main-footer .partners {
