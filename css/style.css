@@ -295,14 +295,15 @@ header a:hover {
 
   .function {
     position: absolute;
-    right: 0;
-    top: 30px;
+    right: 15px;
+    top: 25px;
   }
 
   .function a {
    color: #ccc !important;
    font-size: 20px;
    display: block;
+   padding: 5px;
   }
 
   .top-des {
