@@ -10,14 +10,58 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <style>
-  </style> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <script>
+    $(function () {
+      var windowWidth = $(window).width();
+      if (windowWidth > 1024) {
+        $(".carousel-multi-item .carousel-item").each(function(){
+          var next = $(this).next();
+          if (!next.length) {
+            next = $(this).siblings(':first');
+          }
+          next.children(':first-child').clone().appendTo($(this));
+
+          for (var i=0;i<2;i++) {
+            next=next.next();
+            if (!next.length) {
+              next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+          }
+        });   
+      }
+    });
+
+    function checkValidate(form)
+    { 
+      var letters = /^[A-Za-z]+$/;
+      if( !form.firstName.value.match(letters) || !form.lastName.value.match(letters))
+      {
+        alert("Name shoule be letters");
+        return;
+      }
+      
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(form.email.value.match(mailformat))
+      {
+        alert("Email format shoule be.");
+        return;
+      }
+    }
+</script>
 </head>
 <body>
 	<!-- Header Showcase -->
 	<section id="top-container">
     <header class="d-table pt-4 mx-auto">
-      <div id="branding" class="float-left pc"><h4><span class="highlight">THALES</span>CODE</h4></div>
+      <div id="branding" class="float-left pc"><h5><span class="highlight">THALES</span>CODE</h5></div>
+      <div class="function sp">
+        <a><i class="fas fa-search"></i></a>
+        <a><i class="fa fa-share-alt"></i></a>
+        <a><i class="fas fa-globe"></i></a>
+      </div>
       <!--Navbar for sp-->
       <nav class="navbar navbar-light light-blue lighten-4 w-100 p-0 sp">      
         <!-- Navbar brand -->
@@ -45,8 +89,7 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
-          <!-- Links -->
-    
+          <!-- Links -->    
         </div>
       <!-- Collapsible content -->      
       </nav>
@@ -70,7 +113,7 @@
           </li>
         </ul> 
         <!--/.Navbar-->     
-    </header>
+    </header>    
     <div class="top-des sp">
         <div class="main-title font-weight-bold">ThalesCode</div>
         <div class="sub-title font-weight-bold">The best way <br> to learn</div>
@@ -91,58 +134,146 @@
     </div>
   </section>
   <!-- Main Area -->
-  <main id="main" class="container">     
-      <!-- Section B -->
-      <div class="latest-title">	     
+  <main id="main" class="container">   
+      <div class="about sp sp-title-section mt-4">	     
+          <h1>About</h1> 	     	   
+          <div>
+             <span>The Next Recruitment Generation</span>
+             <a href="#" class="button float-right find-more">Find More</a>
+          </div>
+          <div class="short-line"></div>
+          <p>If you’re brand new to the world of coding and web development, it makes sense to start by teaching yourself using all the free coding resources online.
+              We offer you a fun and unique way to learn coding. With a fast-learning program we are based on challenges using our internal custom tests. Complete them to earn honor and progress to higher ranks. This is a fun way to learn programming online if you're motivated by a little gamification! At the end of this program you will be able to get in awesome jobs with latest technologies in Tokyo.
+                  </p>
+      </div>     
+      <div class="latest-title sp-title-section">	     
 		    <h1>Latest Jobs</h1> 	     	   
 	      <div>
 		       <span>MOTIVO JOB POST</span>
 		       <a href="#" class="button float-right find-more">Find More</a>
 	      </div>
       </div>     
-      <div class="latest-job row">     
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <h4 class="top-line">FullStack Developer</h4>
-          <span class="price" class="price">6.000.000 - 8.000.000万円</span>
-          <p>The candidate in this position will work as Principal Software Developer with strong… technical…</p>
-          <div class="button-list">
-            <input type="button" value="PHP" class="btn btn-info lightblue">
-            <input type="button" value="Laravel" class="btn btn-info lightblue">
-            <input type="button" value="AWS" class="btn btn-info lightblue">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <h4 class="top-line">FullStack Developer</h4>
-            <span class="price">6.000.000 - 8.000.000万円</span>
-          <p>The candidate in this position will work as Principal Software Developer with strong… technical…</p>
-          <div class="button-list">
-            <input type="button" value="PHP" class="btn btn-info lightblue">
-            <input type="button" value="Laravel" class="btn btn-info lightblue">
-            <input type="button" value="AWS" class="btn btn-info lightblue">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <h4 class="top-line">FullStack Developer</h4>
-            <span class="price">6.000.000 - 8.000.000万円</span>
-          <p>The candidate in this position will work as Principal Software Developer with strong… technical…</p>
-          <div class="button-list">
-            <input type="button" value="PHP" class="btn btn-info lightblue">
-            <input type="button" value="Laravel" class="btn btn-info lightblue">
-            <input type="button" value="AWS" class="btn btn-info lightblue">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <h4 class="top-line">FullStack Developer</h4>
-          <span class="price">6.000.000 - 8.000.000万円</span>
-          <p>The candidate in this position will work as Principal Software Developer with strong… technical…</p>
-          <div class="button-list">
-            <input type="button" value="PHP" class="btn btn-info lightblue">
-            <input type="button" value="Laravel" class="btn btn-info lightblue">
-            <input type="button" value="AWS" class="btn btn-info lightblue">
-          </div>
+      <div class="latest-job row">  
+        <!--- Image Slider -->
+        <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2 w-100" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-multi" data-slide-to="1"></li>
+              <li data-target="#carousel-example-multi" data-slide-to="2"></li>
+              <li data-target="#carousel-example-multi" data-slide-to="3"></li>
+              <li data-target="#carousel-example-multi" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="col-lg-12 carousel-item active">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">                  
+                  <div class="short-line"></div>
+                  <h4 class="top-line">FullStack Developer</h4>
+                  <span class="price" class="price">6.000.000 - 8.000.000万円</span>
+                  <p>The candidate in this position will work as Principal Software Developer with strong… technical…</p>
+                  <div class="button-list">
+                    <input type="button" value="PHP" class="btn btn-info lightblue">
+                    <input type="button" value="Laravel" class="btn btn-info lightblue">
+                    <input type="button" value="AWS" class="btn btn-info lightblue">
+                  </div>
+                  <div class="social-media mt-3 pt-3">
+                    <a href="#" class="ml-2"><i class="fas fa-suitcase"></i>Motivo
+                    inc</a>
+                    <a href="#" class="ml-2"><i class="fas fa-map-marker-alt"></i>Shibuya,
+                    Tokyo</a>
+                    <a href="#" class="ml-2"><i class="fas fa-clock"></i><span
+                        class="span-icon">~10/31</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 carousel-item">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                  <div class="short-line"></div>
+                  <h4 class="top-line">FullStack Developer</h4>
+                    <span class="price">6.000.000 - 8.000.000万円</span>
+                  <p>The candidate in this position will work as Principal Software Developer with strong… technical…</p>
+                  <div class="button-list">
+                    <input type="button" value="PHP" class="btn btn-info lightblue">
+                    <input type="button" value="Laravel" class="btn btn-info lightblue">
+                    <input type="button" value="AWS" class="btn btn-info lightblue">
+                  </div>
+                  <div class="social-media mt-3 pt-3">
+                    <a href="#" class="ml-2"><i class="fas fa-suitcase"></i>Motivo
+                    inc</a>
+                    <a href="#" class="ml-2"><i class="fas fa-map-marker-alt"></i>Shibuya,
+                    Tokyo</a>
+                    <a href="#" class="ml-2"><i class="fas fa-clock"></i><span
+                        class="span-icon">~10/31</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 carousel-item">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                  <div class="short-line"></div>
+                  <h4 class="top-line">FullStack Developer</h4>
+                    <span class="price">6.000.000 - 8.000.000万円</span>
+                  <p>The candidate in this position will work as Principal Software Developer with strong… technical…</p>
+                  <div class="button-list">
+                    <input type="button" value="PHP" class="btn btn-info lightblue">
+                    <input type="button" value="Laravel" class="btn btn-info lightblue">
+                    <input type="button" value="AWS" class="btn btn-info lightblue">
+                  </div>
+                  <div class="social-media mt-3 pt-3">
+                    <a href="#" class="ml-2"><i class="fas fa-suitcase"></i>Motivo
+                    inc</a>
+                    <a href="#" class="ml-2"><i class="fas fa-map-marker-alt"></i>Shibuya,
+                    Tokyo</a>
+                    <a href="#" class="ml-2"><i class="fas fa-clock"></i><span
+                        class="span-icon">~10/31</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 carousel-item">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                  <div class="short-line"></div>
+                  <h4 class="top-line">FullStack Developer</h4>
+                  <span class="price">6.000.000 - 8.000.000万円</span>
+                  <p>The candidate in this position will work as Principal Software Developer with strong… technical…</p>
+                  <div class="button-list">
+                    <input type="button" value="PHP" class="btn btn-info lightblue">
+                    <input type="button" value="Laravel" class="btn btn-info lightblue">
+                    <input type="button" value="AWS" class="btn btn-info lightblue">
+                  </div>
+                  <div class="social-media mt-3 pt-3">
+                    <a href="#" class="ml-2"><i class="fas fa-suitcase"></i>Motivo
+                    inc</a>
+                    <a href="#" class="ml-2"><i class="fas fa-map-marker-alt"></i>Shibuya,
+                    Tokyo</a>
+                    <a href="#" class="ml-2"><i class="fas fa-clock"></i><span
+                        class="span-icon">~10/31</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 carousel-item">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                  <div class="short-line"></div>
+                  <h4 class="top-line">FullStack Developer</h4>
+                  <span class="price">6.000.000 - 8.000.000万円</span>
+                  <p>The candidate in this position will work as Principal Software Developer with strong… technical…</p>
+                  <div class="button-list">
+                    <input type="button" value="PHP" class="btn btn-info lightblue">
+                    <input type="button" value="Laravel" class="btn btn-info lightblue">
+                    <input type="button" value="AWS" class="btn btn-info lightblue">
+                  </div>
+                  <div class="social-media mt-3 pt-3">
+                    <a href="#" class="ml-2"><i class="fas fa-suitcase"></i>Motivo
+                    inc</a>
+                    <a href="#" class="ml-2"><i class="fas fa-map-marker-alt"></i>Shibuya,
+                    Tokyo</a>
+                    <a href="#" class="ml-2"><i class="fas fa-clock"></i><span
+                        class="span-icon">~10/31</a>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>   
-      <div class="middle-block row line-top">
+      <div class="middle-block row line-top pc">
         <div class="top-line col-lg-8 col-md-12 col-sm-12 col-xs-12 text-left">
           <h1 class="font-weight-bold">Get where you’re going <br> faster with ThalesCode</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
@@ -184,7 +315,7 @@
         <a href="#" class="button float-right mt-4">Find More</a>
       </div>
       <div class="thales-blog mt-5 line-top d-inline-block w-100">	  
-        <div class="title">	     
+        <div class="title sp-title-section">	     
           <h1>ThalesBlog</h1> 	     	   
           <div>
             <span>MOTIVO JOB POST</span>
@@ -196,14 +327,25 @@
             <img src="./img/blog_1.jpg" class="w-100">
             <h2 class="pt-3 font-weight-bold mt-2" style="min-height: 115px;">A step-by-step guide to getting started with HTML forms</h2>
             <p>HTML forms are required when you want to collect some data from the person who visits your website. For example, when you register/login for applications like Uber, Netflix, or Facebook, you enter information like Name, Email, and Password through HTML forms.</p>
-            <div class="font-awsome">
-                <i class="fas fa-google-plus-g"></i>
+            <div class="social-media mt-3">
+              <a href="#"><i class="p-1 fab fa-google-plus-g"></i></a>             
+              <a href="#"><i class="p-1 fab fa-twitter"></i></a>
+              <a href="#"><i class="p-1 fab fa-facebook"></i></a>              
+              <a href="#"><i class="p-1 fab fa-instagram"></i></a>
+              <span class="float-right font-weight-bold">by Fabian Mezarina</span>
             </div>
           </div>  
           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mt-5">  
             <img src="./img/blog_2.jpg" class="w-100">  
             <h4 class="pt-3 font-weight-bold mt-2" style="min-height: 115px;">These common mistakes will lead to immortal bugs. Learn how to avoid them.</h4>
             <p>The question that you or your teammate would ask after the product manager posts a snapshot of the bug. This whole event feels like a Deja Vu...</p>
+            <div class="social-media mt-3">
+              <a href="#"><i class="p-1 fab fa-google-plus-g"></i></a>             
+              <a href="#"><i class="p-1 fab fa-twitter"></i></a>
+              <a href="#"><i class="p-1 fab fa-facebook"></i></a>              
+              <a href="#"><i class="p-1 fab fa-instagram"></i></a>
+              <span class="float-right font-weight-bold">by Fabian Mezarina</span>
+            </div>
           </div> 
         </div>
         <div class="row">            
@@ -211,11 +353,25 @@
               <img src="./img/blog_3.jpg" class="w-100">  
               <h4 class="pt-3 font-weight-bold mt-2" style="min-height: 115px;">These common mistakes will lead to immortal bugs. Learn how to avoid them.</h4>
               <p>The question that you or your teammate would ask after the product manager posts a snapshot of the bug. This whole event feels like a Deja Vu...</p>
+              <div class="social-media mt-3">
+                <a href="#"><i class="p-1 fab fa-google-plus-g"></i></a>             
+                <a href="#"><i class="p-1 fab fa-twitter"></i></a>
+                <a href="#"><i class="p-1 fab fa-facebook"></i></a>              
+                <a href="#"><i class="p-1 fab fa-instagram"></i></a>
+                <span class="float-right font-weight-bold">by Fabian Mezarina</span>
+              </div>
             </div> 
             <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 mt-5">    
                 <img src="./img/blog_4.jpg" class="w-100">
                 <h2 class="pt-3 font-weight-bold mt-2" style="min-height: 115px;">A step-by-step guide to getting started with HTML forms</h2>
                 <p>HTML forms are required when you want to collect some data from the person who visits your website. For example, when you register/login for applications like Uber, Netflix, or Facebook, you enter information like Name, Email, and Password through HTML forms.</p>
+                <div class="social-media mt-3">
+                  <a href="#"><i class="p-1 fab fa-google-plus-g"></i></a>             
+                  <a href="#"><i class="p-1 fab fa-twitter"></i></a>
+                  <a href="#"><i class="p-1 fab fa-facebook"></i></a>              
+                  <a href="#"><i class="p-1 fab fa-instagram"></i></a>
+                  <span class="float-right font-weight-bold">by Fabian Mezarina</span>
+                </div>
               </div>  
           </div>
       </div>
@@ -234,13 +390,13 @@
               Email: info@motivo.jp</p>
           </div> 
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <form class="float-right">
-              <input type="text" placeholder="COMPANY NAME">
-              <input type="text" placeholder="FIRST NAME">
-              <input type="text" placeholder="LAST NAME">
-              <input type="email" placeholder="EMAIL">
+            <form name="form1" class="float-right">
+              <input type="text" name="company" placeholder="COMPANY NAME">
+              <input type="text" name="firstName" placeholder="FIRST NAME">
+              <input type="text" name="lastName" placeholder="LAST NAME">
+              <input type="text" name="email" placeholder="EMAIL">
               <textarea placeholder="MESSAGE"></textarea>
-              <button class="" type="submit">SEND</button>
+              <button type="submit" onclick="checkValidate(document.form1)">SEND</button>
             </form>
           </div> 
         </div>
@@ -270,7 +426,5 @@
     </div>
     <div class="copyright d-inline-block w-100 text-right my-5 pb-5">© Copyright Thales COde inc 2019</div>
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
